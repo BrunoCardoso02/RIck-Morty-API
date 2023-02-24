@@ -1,23 +1,36 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { Main } from '../ContainerStyled';
+import { CharacterList } from '../CharacterListStyled';
 
 export default function Container() {
-    const [request, setRequest] = useState([]);
+    const [charactersData, setCharactersData] = useState([]);
 
     useEffect(() => {
         const url = 'https://rickandmortyapi.com/api/character';
         fetch(url)
-        .then((response)=>{
+        .then(response=>{
             return response.json()
         })
-        .then((dados)=>{
-            console.log(dados)
-        });
+        .then(dados =>{
+           console.log(dados.results)
+           setCharactersData(dados.results)});
     }, [])
 
   return (
-    <div>
+    <Main className='container'>
 
-    </div>
+    {charactersData.map(results => {
+      
+      return(
+        <CharacterList>
+          <h3>{results.id}</h3>
+          <img src={results.image} alt="" />
+          <h3>{results.name}</h3>
+        </CharacterList>
+      )
+    })}
+
+    </Main>
   )
 }
