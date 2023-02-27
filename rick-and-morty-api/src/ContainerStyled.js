@@ -1,9 +1,8 @@
-import style from "styled-components";
-import logo from './images/logo.jpg'
+import styled from "styled-components";
 
-export const Main = style.section `
+export const Main = styled.section`
     position: relative;
-    background-image: url(${logo});
+    background-size: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
