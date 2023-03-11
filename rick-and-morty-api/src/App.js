@@ -1,6 +1,7 @@
 import './App.css';
-import Cabecalho from './components/Cabecalho';
-import Container from './components/Container';
+import Cabecalho from './components/pages/Home/Cabecalho';
+import Container from './components/pages/Home/Container';
+
 
 function App() {
   return (

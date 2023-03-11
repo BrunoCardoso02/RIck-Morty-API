@@ -2,21 +2,18 @@ import styled from 'styled-components';
 
 export const CharacterList = styled.div `
     position: relative;
-    height: 40vh;
-    width: 250px;
+    width: 279px;
     color: #fff;
     background: none;
     border: 2px solid #fff;
     border-radius: 15px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
     h3 {
         padding: 10px;
     }
     img {
-        position: relative;
-        width: 90%;
+        width: 100%;
         height: 25vh;
-        text-align: center;
-        margin-left: 12px;
     }
 `

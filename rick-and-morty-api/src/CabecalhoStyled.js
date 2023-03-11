@@ -19,12 +19,13 @@ export const CabecalhoStyled = styled.nav `
         height: 5vh;
         width: 25vw;
         background: none;
-        border: 2px solid #fff;
+        border: none;
+        border-bottom: 2px solid #fff;
         color: #fff;
-        border-radius: 15px;
         outline: none;
         padding: 10px;
         font-size: 16px;
         font-family: Arial, Helvetica, sans-serif;
+        margin-right: 47px;
     }
 `
